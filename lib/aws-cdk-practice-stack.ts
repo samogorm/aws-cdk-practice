@@ -1,5 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { aws_s3 as S3 } from 'aws-cdk-lib';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class AwsCdkPracticeStack extends cdk.Stack {
@@ -12,5 +13,11 @@ export class AwsCdkPracticeStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'AwsCdkPracticeQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
+
+    new S3.Bucket(this, 'MyFirstBucket', {
+      versioned: true,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      autoDeleteObjects: true,
+    });
   }
 }
