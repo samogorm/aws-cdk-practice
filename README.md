@@ -5,6 +5,9 @@ This repo contains code where I've been practising AWS services, more specifical
 - CDK
 - Lambda
 - API Gateway
+- AWS Cognito
+  - User Pools
+  - Identity Pools
 
 As such, you probably won't see any TDD here!
 
